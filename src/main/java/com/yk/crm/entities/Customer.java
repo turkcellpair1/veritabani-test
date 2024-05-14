@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -27,7 +28,7 @@ public class Customer {
     @Column(name = "nationality_id")
     private int nationalityId;
     @Column(name="birth_date")
-    private Date birthDate;
+    private LocalDate birthDate;
     @Column(name = "mother_name")
     private String motherName;
     @Column(name = "father_name")
