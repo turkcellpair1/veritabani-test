@@ -11,12 +11,12 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "Accounts")
+@Table(name = "accounts")
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "account_id")
-    private int accountId;
+    @Column(name = "id")
+    private int id;
     @Column(name = "account_number")
     private String accountNumber;
     @Column(name = "account_status")
@@ -30,6 +30,6 @@ public class Account {
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
-    @OneToOne(mappedBy = "account")
-    private Bill bill;
+    @OneToMany(mappedBy = "account")
+    private List<Bill> bills;
 }

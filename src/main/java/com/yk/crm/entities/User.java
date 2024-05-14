@@ -9,12 +9,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "Logins")
-public class Login {
+@Table(name = "users")
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id")
-    private int userId;
+    @Column(name = "id")
+    private int id;
     @Column(name = "email")
     private String email;
     @Column(name = "password")
@@ -24,6 +24,6 @@ public class Login {
     @JoinColumn(name = "role_id")
     private Role role;
 
-    @OneToOne(mappedBy = "login")
+    @OneToOne(mappedBy = "user")
     private Customer customer;
 }

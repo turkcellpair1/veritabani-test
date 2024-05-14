@@ -11,12 +11,12 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "ServiceAddresses")
+@Table(name = "serviceAddresses")
 public class ServiceAddress {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "service_address_id")
-    private int serviceAddressId;
+    @Column(name = "id")
+    private int id;
     @Column(name= "address_name")
     private String addressName;
     @Column(name= "city")

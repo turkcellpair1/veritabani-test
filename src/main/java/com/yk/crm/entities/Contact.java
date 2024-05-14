@@ -11,12 +11,12 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "Contacts")
+@Table(name = "contacts")
 public class Contact {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "contact_id")
-    private int contactId;
+    @Column(name = "id")
+    private int id;
     @Column(name = "email")
     private String email;
     @Column(name = "mobile_phone")

@@ -11,12 +11,12 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "Stocks")
+@Table(name = "stocks")
 public class Stock {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "stock_id")
-    private int stockId;
+    @Column(name = "id")
+    private int id;
     @Column(name = "stock_amount")
     private int stockAmount;
 

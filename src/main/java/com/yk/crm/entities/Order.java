@@ -13,19 +13,19 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "Orders")
+@Table(name = "orders")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "order_id")
-    private int orderId;
+    @Column(name = "id")
+    private int id;
     @Column(name= "total_amount")
     private double total_amount;
     @Column(name= "service_start_date")
     private LocalDate serviceStartDate;
 
     @ManyToOne()
-    @JoinColumn(name = "service_address_id")
+    @JoinColumn(name = "serviceAddress_id")
     private ServiceAddress serviceAddress;
 
     @OneToMany(mappedBy = "order")

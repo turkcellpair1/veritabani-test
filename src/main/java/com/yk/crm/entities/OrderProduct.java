@@ -13,8 +13,8 @@ import lombok.NoArgsConstructor;
 public class OrderProduct {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="op_id")
-    private int opId;
+    @Column(name="id")
+    private int id;
     @Column(name="quantity")
     private int quantity;
 

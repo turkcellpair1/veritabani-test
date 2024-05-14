@@ -11,15 +11,15 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "Categories")
-public class ProductCategory {
+@Table(name = "categories")
+public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "category_id")
-    private int categoryId;
+    @Column(name = "id")
+    private int id;
     @Column(name = "category_name")
     private String categoryName;
 
-    @OneToMany(mappedBy = "productCategory")
+    @OneToMany(mappedBy = "category")
     private List<Product> products;
 }

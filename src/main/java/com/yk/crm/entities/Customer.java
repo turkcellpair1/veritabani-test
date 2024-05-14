@@ -6,19 +6,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "Customers")
+@Table(name = "customers")
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "costumer_id")
-    private int costumerId;
+    @Column(name = "id")
+    private int id;
     @Column(name = "first_name")
     private String firstName;
     @Column(name = "middle_name")
@@ -38,7 +37,7 @@ public class Customer {
 
     @OneToOne()
     @JoinColumn(name = "user_id")
-    private Login login;
+    private User user;
 
     @OneToOne()
     @JoinColumn(name = "contact_id")

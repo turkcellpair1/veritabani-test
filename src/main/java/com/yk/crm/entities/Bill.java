@@ -9,14 +9,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "Bills")
+@Table(name = "bills")
 public class Bill {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "bill_id")
-    private int billId;
+    @Column(name = "id")
+    private int id;
 
-    @OneToOne()
+    @ManyToOne()
     @JoinColumn(name = "account_id")
     private Account account;
 
