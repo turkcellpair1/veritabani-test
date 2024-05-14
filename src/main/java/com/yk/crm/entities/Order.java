@@ -21,7 +21,7 @@ public class Order {
     @Column(name= "total_amount")
     private double total_amount;
     @Column(name= "service_start_date")
-    private Date serviceStartDate;
+    private LocalDate serviceStartDate;
 
     @ManyToOne()
     @JoinColumn(name = "service_address_id")
