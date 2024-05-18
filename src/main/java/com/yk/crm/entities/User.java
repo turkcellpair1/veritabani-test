@@ -24,6 +24,4 @@ public class User {
     @JoinColumn(name = "role_id")
     private Role role;
 
-    @OneToOne(mappedBy = "user")
-    private Customer customer;
 }

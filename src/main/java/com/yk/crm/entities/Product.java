@@ -31,6 +31,4 @@ public class Product {
     @OneToOne(mappedBy = "product")
     private Stock stock;
 
-    @OneToMany(mappedBy = "product")
-    private List<OrderProduct> orderProduct;
 }

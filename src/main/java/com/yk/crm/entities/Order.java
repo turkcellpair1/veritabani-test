@@ -31,7 +31,6 @@ public class Order {
     @OneToMany(mappedBy = "order")
     private List<OrderProduct> orderProduct;
 
-    @OneToOne(mappedBy = "order")
-    private Bill bill;
+
 
 }

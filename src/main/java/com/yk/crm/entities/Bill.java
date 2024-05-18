@@ -16,11 +16,9 @@ public class Bill {
     @Column(name = "id")
     private int id;
 
-    @ManyToOne()
-    @JoinColumn(name = "account_id")
-    private Account account;
+    @Column(name = "account_id",nullable = false)
+    private Integer account_id;
 
-    @OneToOne()
-    @JoinColumn(name = "order_id")
-    private Order order;
+    @Column(name = "order_id",unique = true)
+    private Integer order_id;
 }

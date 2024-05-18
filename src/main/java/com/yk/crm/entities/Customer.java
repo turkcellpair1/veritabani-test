@@ -35,9 +35,8 @@ public class Customer {
     @Column(name = "gender")
     private String gender;
 
-    @OneToOne()
-    @JoinColumn(name = "user_id")
-    private User user;
+    @Column(name = "user_id",unique = true)
+    private Integer user_id;
 
     @OneToOne(mappedBy = "customer")
     private Contact contact;

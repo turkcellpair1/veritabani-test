@@ -30,6 +30,4 @@ public class Account {
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
-    @OneToMany(mappedBy = "account")
-    private List<Bill> bills;
 }
