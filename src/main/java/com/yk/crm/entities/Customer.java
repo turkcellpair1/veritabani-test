@@ -39,8 +39,7 @@ public class Customer {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToOne()
-    @JoinColumn(name = "contact_id")
+    @OneToOne(mappedBy = "customer")
     private Contact contact;
 
     @OneToMany(mappedBy = "customer")

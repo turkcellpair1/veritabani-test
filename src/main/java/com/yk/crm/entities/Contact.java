@@ -26,6 +26,7 @@ public class Contact {
     @Column(name = "fax")
     private String fax;
 
-    @OneToOne(mappedBy = "contact")
+    @OneToOne()
+    @JoinColumn(name = "customer_id")
     private Customer customer;
 }
